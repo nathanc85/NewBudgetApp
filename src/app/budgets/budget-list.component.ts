@@ -21,7 +21,7 @@ export class BudgetListComponent implements OnInit {
 
   public set filteredBy(value: string) {
     this.filteredByTemp = value;
-    this.filteredBudgets = this.filteredBy ? this.performFiltering(this.filteredBy) : this.budgets;
+    this.filteredBudgets = this.filteredBy.length > 2 ? this.performFiltering(this.filteredBy) : this.budgets;
   }
 
   filteredBudgets: IBudget[] = [];
@@ -47,7 +47,8 @@ export class BudgetListComponent implements OnInit {
   }
 
   performFiltering(filteredBy: string): IBudget[] {
-    filteredBy = filteredBy.toLowerCase();
-    return this.filteredBudgets.filter( budget => budget.budgetName.toLowerCase().indexOf(filteredBy) !== -1);
+    //filteredBy = filteredBy.toLowerCase();
+    //return this.filteredBudgets.filter( budget => budget.budgetName.toLowerCase().indexOf(filteredBy) !== -1);
+    return this.filteredBudgets.filter( budget => budget.budgetName.match(new RegExp('/' + filteredBy + '/ig')).length > 0);
   }
 }

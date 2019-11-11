@@ -1,8 +1,70 @@
-<p>customer works!</p>
-
 <div class="card">
-  <div class="card-header">{{pageTitle}}</div>
+  <div class="card-header">{{ pageTitle }}</div>
   <div class="card-body">
+    <form novalidate (ngSubmit)="submit()" [formGroup]="customerForm">
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="firstName"
+          >First Name</label
+        >
+        <div class="col-md-8">
+          <input
+            class="form-control"
+            id="firstNameId"
+            formControlName="firstName"
+            type="text"
+            placeholder="First Name"
+          />
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="lastName">Last Name</label>
+        <div class="col-md-8">
+          <input
+            class="form-control"
+            id="lastNameId"
+            formControlName="lastName"
+            type="text"
+            placeholder="Last Name"
+          />
+        </div>
+      </div>
+
+      <!-- <div formGroupName='emailGroup'> -->
+          <div class="form-group row mb-2">
+              <label class="col-md-2 col-form-label" for="email">Email</label>
+              <div class="col-md-8">
+                <input
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                  type="text"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="confirmEmail">Confirm Email</label>
+                <div class="col-md-8">
+                  <input
+                    class="form-control"
+                    id="confirmEmail"
+                    formControlName="confirmEmail"
+                    type="text"
+                    placeholder="Confirm Email"
+                  />
+                </div>
+              </div>
+      <!-- </div> -->
+
+      <div class="form-group row mb-2">
+        <div class="col-md-4 offset-2">
+          <button type="submit" class="btn btn-primary mr-3">Save</button>
+        </div>
+      </div>
+
+    </form>
   </div>
   <div class="card-footer"></div>
 </div>
