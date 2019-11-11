@@ -1,0 +1,71 @@
+// [
+//   {
+//     "productId": 1,
+//     "productName": "Leaf Rake",
+//     "productCode": "GDN-0011",
+//     "releaseDate": "March 19, 2019",
+//     "description": "Leaf rake with 48-inch wooden handle.",
+//     "price": 19.95,
+//     "starRating": 3.2,
+//     "imageUrl": "assets/images/leaf_rake.png"
+//   }
+// ]
+
+[
+  {
+    "budgetId": 1,
+    "budgetName": "November",
+    "dateCreated": "November 19, 2019",
+    "lastModified": "November 19, 2019",
+    "budgetAmount": 500,
+    "amountPlanned": 400,
+    "amountUnplanned": 100,
+    "amountSpent": 250,
+    "amountRemaining": 250,
+    "notes": "This month we are trying to save mrore money for a car.",
+    "planningRating": 4,
+    "spendingRating": 2.5
+  },
+  {
+    "budgetId": 2,
+    "budgetName": "October",
+    "dateCreated": "October 19, 2019",
+    "lastModified": "October 19, 2019",
+    "budgetAmount": 500,
+    "amountPlanned": 300,
+    "amountUnplanned": 200,
+    "amountSpent": 200,
+    "amountRemaining": 300,
+    "notes": null,
+    "planningRating": 3,
+    "spendingRating": 2
+  },
+  {
+    "budgetId": 3,
+    "budgetName": "September",
+    "dateCreated": "September 19, 2019",
+    "lastModified": "September 19, 2019",
+    "budgetAmount": 500,
+    "amountPlanned": 500,
+    "amountUnplanned": 0,
+    "amountSpent": 500,
+    "amountRemaining": 0,
+    "notes": "Going on vacation this month.",
+    "planningRating": 5,
+    "spendingRating": 5
+  },
+  {
+    "budgetId": 4,
+    "budgetName": "August",
+    "dateCreated": "August 19, 2019",
+    "lastModified": "August 19, 2019",
+    "budgetAmount": 500,
+    "amountPlanned": 300,
+    "amountUnplanned": 200,
+    "amountSpent": 300,
+    "amountRemaining": 200,
+    "notes": "Gazzelle intensive",
+    "planningRating": 3,
+    "spendingRating": 3
+  }
+]
