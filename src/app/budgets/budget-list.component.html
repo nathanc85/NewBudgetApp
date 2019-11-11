@@ -1,0 +1,72 @@
+<div class="card">
+  <div class="card-header">{{ pageTitle }}</div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">Filter by</div>
+      <div class="col-md-4"><input [(ngModel)]="filteredBy" type="text" /></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Filtered by {{ filteredBy }}</h4>
+      </div>
+    </div>
+
+    <div class="table-responsive" *ngIf="budgets && budgets.length">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-primary" (click)="toggleImage()">
+                {{ showImage ? "Hide" : "Show" }} Images
+              </button>
+            </th>
+            <th>Name</th>
+            <th>Budget Amount</th>
+            <th>Planned</th>
+            <th>Unplanned</th>
+            <th>Spent</th>
+            <th>Remaining</th>
+            <th>Notes</th>
+            <th>Last modified</th>
+            <th>Planning</th>
+            <th>Spending</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let budget of budgets">
+          <tr>
+            <td>
+              <img
+                *ngIf="showImage"
+                [src]="budget.imageUrl"
+                [title]="budget.budgetName"
+                [style.width.px]="imageWidth"
+                [style.margin.px]="expression"
+              />
+            </td>
+
+            <td>{{ budget.budgetName }}</td>
+            <td>
+              {{ budget.budgetAmount | currency: "USD":"symbol":"1.2-2" }}
+            </td>
+            <td>
+              {{ budget.amountPlanned | currency: "USD":"symbol":"1.2-2" }}
+            </td>
+            <td>
+              {{ budget.amountUnplanned | currency: "USD":"symbol":"1.2-2" }}
+            </td>
+            <td>{{ budget.amountSpent | currency: "USD":"symbol":"1.2-2" }}</td>
+            <td>
+              {{ budget.amountRemaining | currency: "USD":"symbol":"1.2-2" }}
+            </td>
+            <td>{{ budget.notes }}</td>
+            <td>{{ budget.lastModified | date: "short" }}</td>
+            <td>{{ budget.planningRating }}</td>
+            <td>{{ budget.spendingRating }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
