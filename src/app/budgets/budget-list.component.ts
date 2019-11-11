@@ -11,7 +11,19 @@ export class BudgetListComponent implements OnInit {
   imageWidth = 50;
   imageMargin = 4;
   showImage = false;
-  filteredBy: string;
+
+  filteredByTemp: string;
+
+  public get filteredBy(): string {
+    return this.filteredByTemp;
+  }
+
+  public set filteredBy(value: string) {
+    this.filteredByTemp = value;
+    this.filteredBudgets = this.filteredBy ? this.performFiltering(this.filteredBy) : this.budgets;
+  }
+
+  filteredBudgets: IBudget[];
 
   budgets: IBudget[] = [
     {
@@ -76,7 +88,10 @@ export class BudgetListComponent implements OnInit {
     }
   ];
 
-  constructor() {}
+  constructor() {
+    this.filteredBy = '';
+    this.filteredBudgets = this.budgets;
+  }
 
   ngOnInit() {
     console.log('Inside ngOnInit()');
@@ -86,5 +101,10 @@ export class BudgetListComponent implements OnInit {
     console.log('Inside toggleImage()');
     this.showImage = !this.showImage;
     console.log('ShowImage: ' + this.showImage);
+  }
+
+  performFiltering(filteredBy: string): IBudget[] {
+    filteredBy = filteredBy.toLowerCase();
+    return this.filteredBudgets.filter( budget => budget.budgetName.toLowerCase().indexOf(filteredBy) !== -1);
   }
 }
