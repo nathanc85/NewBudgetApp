@@ -13,7 +13,7 @@ export class BudgetListComponent implements OnInit {
   imageMargin = 4;
   showImage = false;
 
-  filteredByTemp: string;
+  filteredByTemp = '';
 
   public get filteredBy(): string {
     return this.filteredByTemp;
@@ -24,9 +24,9 @@ export class BudgetListComponent implements OnInit {
     this.filteredBudgets = this.filteredBy ? this.performFiltering(this.filteredBy) : this.budgets;
   }
 
-  filteredBudgets: IBudget[];
+  filteredBudgets: IBudget[] = [];
 
-  budgets: IBudget[];
+  budgets: IBudget[] = [];
 
   constructor(private budgetsService: BudgetService) {
 
