@@ -70,7 +70,6 @@ export class BudgetService {
         spendingRating: 3,
         imageUrl: 'assets/images/bird4.png'
       }
-    ]
-    ;
+    ];
   }
 }

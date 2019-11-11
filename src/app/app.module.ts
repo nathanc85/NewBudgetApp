@@ -5,9 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BudgetListComponent } from './budgets/budget-list.component';
 import { NoDotsPipe } from './shared/no-dots-pipe.pipe';
+import { BudgetDetailComponent } from './budgets/budget-detail.component';
+import { WelcomeComponent } from './general/welcome.component';
 
 @NgModule({
-  declarations: [AppComponent, BudgetListComponent, NoDotsPipe],
+  declarations: [AppComponent, BudgetListComponent, NoDotsPipe, BudgetDetailComponent, WelcomeComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
