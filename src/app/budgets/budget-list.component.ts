@@ -4,7 +4,7 @@ import { IBudget } from './ibudget';
 @Component({
   selector: 'app-budget-list',
   templateUrl: './budget-list.component.html',
-  styles: []
+  styleUrls: ['./budget-list.component.css']
 })
 export class BudgetListComponent implements OnInit {
   pageTitle = 'Budget List';
@@ -78,9 +78,12 @@ export class BudgetListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('Inside ngOnInit()');
+  }
 
   toggleImage() {
+    console.log('Inside toggleImage()');
     this.showImage = !this.showImage;
     console.log('ShowImage: ' + this.showImage);
   }

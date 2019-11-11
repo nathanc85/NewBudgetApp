@@ -60,7 +60,7 @@
             <td>
               {{ budget.amountRemaining | currency: "USD":"symbol":"1.2-2" }}
             </td>
-            <td>{{ budget.notes }}</td>
+            <td>{{ budget.notes | savingsPipe }}</td>
             <td>{{ budget.lastModified | date: "short" }}</td>
             <td>{{ budget.planningRating }}</td>
             <td>{{ budget.spendingRating }}</td>
