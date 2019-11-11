@@ -10,9 +10,11 @@ import { BudgetListComponent } from './budgets/budget-list.component';
 import { NoDotsPipe } from './shared/no-dots-pipe.pipe';
 import { BudgetDetailComponent } from './budgets/budget-detail.component';
 import { WelcomeComponent } from './general/welcome.component';
+import { CustomerComponent } from './customers/customer.component';
 
 const ROUTES: Route[] = [
   {path: 'welcome', component: WelcomeComponent},
+  {path: 'login', component: CustomerComponent},
   {path: 'budgets', component: BudgetListComponent},
   {path: 'budgets/:id', canActivate: [BudgetDetailGuard] , component: BudgetDetailComponent},
   {path: '', redirectTo: 'budgets', pathMatch: 'full'},
@@ -26,7 +28,8 @@ const ROUTES: Route[] = [
     NoDotsPipe,
     BudgetDetailComponent,
     WelcomeComponent,
-    PageErrorComponent
+    PageErrorComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

@@ -25,9 +25,9 @@
             <th>Name</th>
             <th>Budget Amount</th>
             <th>Planned</th>
-            <th>Unplanned</th>
+            <!-- <th>Unplanned</th> -->
             <th>Spent</th>
-            <th>Remaining</th>
+            <!-- <th>Remaining</th> -->
             <th>Notes</th>
             <th>Last modified</th>
             <th>Planning</th>
@@ -54,13 +54,13 @@
             <td>
               {{ budget.amountPlanned | currency: "USD":"symbol":"1.2-2" }}
             </td>
-            <td>
+            <!-- <td>
               {{ budget.amountUnplanned | currency: "USD":"symbol":"1.2-2" }}
-            </td>
+            </td> -->
             <td>{{ budget.amountSpent | currency: "USD":"symbol":"1.2-2" }}</td>
-            <td>
+            <!-- <td>
               {{ budget.amountRemaining | currency: "USD":"symbol":"1.2-2" }}
-            </td>
+            </td> -->
             <td>{{ budget.notes | noDotsPipe }}</td>
             <td>{{ budget.lastModified | date: "short" }}</td>
             <td>{{ budget.planningRating }}</td>
