@@ -11,9 +11,9 @@ import { BudgetDetailComponent } from './budgets/budget-detail.component';
 import { WelcomeComponent } from './general/welcome.component';
 
 const ROUTES = [
+  {path: 'welcome', component: WelcomeComponent},
   {path: 'budgets', component: BudgetListComponent},
   {path: 'budgets/:id', component: BudgetDetailComponent},
-  {path: 'welcome', redirectTo: 'budgets', pathMatch: 'full'},
   {path: '', redirectTo: 'budgets', pathMatch: 'full'},
   {path: '**', component: PageErrorComponent}
 ];

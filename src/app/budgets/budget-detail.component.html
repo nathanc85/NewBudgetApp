@@ -1,5 +1,7 @@
 <div class="card">
-  <div class="card-header">
-    {{pageTitle}}
+  <div class="card-header">{{ pageTitle }} - Budget{{ budgetId }}</div>
+  <div class="card-body">Details about Budget{{ budgetId }}</div>
+  <div class="card-footer">
+    <button class="btn btn-secondary" (click)="onBack()">Back</button>
   </div>
 </div>

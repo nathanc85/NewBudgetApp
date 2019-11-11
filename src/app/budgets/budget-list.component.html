@@ -46,7 +46,8 @@
               />
             </td>
 
-            <td>{{ budget.budgetName }}</td>
+            <td><a [routerLink]="['/budgets', budget.budgetId]"
+            routerLinkActive="active"> {{ budget.budgetName }}</a></td>
             <td>
               {{ budget.budgetAmount | currency: "USD":"symbol":"1.2-2" }}
             </td>
