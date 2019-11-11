@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BudgetListComponent } from './budgets/budget-list.component';
-import { SavingsPipePipe } from './shared/savings-pipe.pipe';
+import { NoDotsPipe } from './shared/no-dots-pipe.pipe';
 
 @NgModule({
-  declarations: [AppComponent, BudgetListComponent, SavingsPipePipe],
+  declarations: [AppComponent, BudgetListComponent, NoDotsPipe],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
