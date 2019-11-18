@@ -47,8 +47,8 @@ export class BudgetListComponent implements OnInit {
   }
 
   performFiltering(filteredBy: string): IBudget[] {
-    //filteredBy = filteredBy.toLowerCase();
-    //return this.filteredBudgets.filter( budget => budget.budgetName.toLowerCase().indexOf(filteredBy) !== -1);
-    return this.filteredBudgets.filter( budget => budget.budgetName.match(new RegExp('/' + filteredBy + '/ig')).length > 0);
+    filteredBy = filteredBy.toLowerCase();
+    return this.filteredBudgets.filter( budget => budget.budgetName.toLowerCase().indexOf(filteredBy) !== -1);
+    //return this.filteredBudgets.filter( budget => (new RegExp('/.?' + filteredBy + '.?/igm')).test(budget.budgetName));
   }
 }

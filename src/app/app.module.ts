@@ -40,4 +40,7 @@ const ROUTES: Route[] = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  pagetitle: string = "Demo";
+
+}

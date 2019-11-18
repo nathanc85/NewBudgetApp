@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
   <a class="navbar-light">{{pageTitle}}</a>
   <ul class="nav nav-pills">
-    <li><a [routerLink]="['/welcome']" routerLinkActive="active"  class="nav-link">Home</a></li>
-    <li><a [routerLink]="['/budgets']" routerLinkActive="active" [routerLinkActiveOptions] = '{exact: true}' class="nav-link">Budget List</a></li>
+    <li><a [routerLink]="['/welcome']" routerLinkActive="active" class="nav-link">Home</a></li>
+    <li><a [routerLink]="['/budgets']" routerLinkActive="active" [routerLinkActiveOptions]='{exact: true}' class="nav-link">Budget List</a></li>
     <li><a [routerLink]="['/budgets/1']" routerLinkActive="active"  class="nav-link">Budget Detail</a></li>
     <li><a [routerLink]="['/signup']" routerLinkActive="active"  class="nav-link">Sign Up</a></li>
   </ul>

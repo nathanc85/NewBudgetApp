@@ -23,5 +23,5 @@ export class CustomerComponent implements OnInit {
     });
   }
 
-  submit(){}
+  submit() {}
 }
